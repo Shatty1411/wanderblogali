@@ -83,7 +83,7 @@ include ("function/function.php");
         <div class="col-md-3">
 
             <h4>
-                <?php get_authors(); ?>
+                <?php getUserInfo(); ?>
             </h4>
 
             <br>

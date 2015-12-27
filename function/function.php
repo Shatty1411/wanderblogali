@@ -67,7 +67,7 @@ function full_adventure(){
     global $DbConnection;
     if(isset($_GET['adventure'])){
         $id = $_GET['adventure'];
-        $advent= "SELECT * FROM Adventures WHERE adventureID = '$id'";
+        $advent= "SELECT * FROM adventures WHERE adID = '$id'";
         $run_advent = mysqli_query($DbConnection, $advent);
 
         while ($row = mysqli_fetch_array($run_advent)){
@@ -96,7 +96,7 @@ function adventure_images(){
     global $DbConnection;
     if(isset($_GET['adventure'])){
         $id = $_GET['adventure'];
-        $advent= "SELECT * FROM Adventures WHERE adventureID = '$id'";
+        $advent= "SELECT * FROM Adventures WHERE adID = '$id'";
         $run_advent = mysqli_query($DbConnection, $advent);
 
         while ($row = mysqli_fetch_array($run_advent)){
@@ -243,6 +243,39 @@ Date of Birth: $author_doB
 He has written $amount adventures
 </div>
 EOT;
+    }
+    return $value;
+}
+
+
+function getUserInfo (){
+    global $DbConnection;;
+    $value = '';
+    $author_id = $_GET['id'];
+    $author = "SELECT * FROM users WHERE userID = '$author_id'";
+    $d_author = mysqli_query($DbConnection, $author);
+    while($row = mysqli_fetch_array($d_author)){
+        $author_name= ucfirst($row['name']);
+        $author_email= $row['email'];
+        $author_country=$row['country'];
+        $role = $row['role'];
+        $author_story = "SELECT * FROM adventures WHERE userID='$author_id'";
+        $run_author_story = mysqli_query($DbConnection, $author_story);
+        $amount = mysqli_num_rows($run_author_story);
+        $value .=<<<EOT
+<div class = "facts">
+<p>Name: $author_name</p>
+<p>Email: $author_email</p>
+<p>Country: $author_country</p>
+<p>Role: $role </p>
+<p>Adventures ($amount) </p>
+</div>
+EOT;
+        if ($role == 'Author'){
+            $value .=<<<EOT
+<p><a href='adventureform.php'>click here to create an adventure</a> </p>;
+EOT;
+        }
     }
     return $value;
 }

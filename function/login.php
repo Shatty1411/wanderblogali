@@ -10,7 +10,7 @@ if (isset($_POST['olvidado'])) {
     $email = mysqli_real_escape_string($DbConnection, $_POST['email']);
     $password = md5($_POST['password']);
 
-    $checklogin = mysqli_query($DbConnection, "SELECT * FROM users WHERE email = '$email' AND password = '$password'");
+    $checklogin = mysqli_query($DbConnection, "SELECT * FROM users WHERE email = '$email' AND passw = '$password'");
 
     if (mysqli_num_rows($checklogin) == 1) {
         $row = mysqli_fetch_assoc($checklogin);

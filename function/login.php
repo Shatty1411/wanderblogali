@@ -22,7 +22,7 @@ if (isset($_POST['olvidado'])) {
         $_SESSION['username'] = $username;
         $_SESSION['name'] = $name;
         $_SESSION['LoggedIn'] = 1;
-        echo "<script>window.open('../author-page.php', '_self')</script>";
+        echo "<script>window.open('../profile.php', '_self')</script>";
         exit();
     }
     else {

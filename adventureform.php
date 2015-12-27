@@ -1,12 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Albc
- * Date: 12/23/2015
- * Time: 12:23 AM
- *
- */
-include ("function/function.php");
+* Created by PhpStorm.
+* User: Albc
+* Date: 12/23/2015
+* Time: 12:27 AM
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,11 +24,6 @@ include ("function/function.php");
 
     <!-- Custom CSS -->
     <link href="css/wanderblog.css" rel="stylesheet">
-
-
-
-
-
 
 </head>
 
@@ -55,7 +48,7 @@ include ("function/function.php");
 
                 <li ><a href="index.php">Index</a></li>
                 <li class=""><a href="about.php">About</a></li>
-                <li ><a href="signup.php">Signup</a></li>
+                <li class="active"><a href="signup.php">Signup</a></li>
                 <li><a href="adventure.php">Adventure</a></li>
                 <li ><a href="loginform.php">Login</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -66,66 +59,63 @@ include ("function/function.php");
     </div>
 
 </nav>
-<?php if (isset($_SESSION['name'])){
-    echo '
-        <div id="logout">
-           <a href="functions/logout.php" ><button type="submit">Logout</button></a>
-        </div>'; }?>
+
+
+
 <!-- Page Content -->
 <div class="container">
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Authors Page</h1>
-            <h4>
-                <?php getUserInfo(); ?>
-            </h4>
+            <h1 class="page-header">Create an Adventure
+            </h1>
 
-            <br>
         </div>
     </div>
-    <!-- /.row -->
-    <!-- Page Content -->
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="container">
-
-        <div class="col-md-3">
-
-
-
+        <div class="row">
+            <form role="form" action="adventureProcessing.php" method="post">
+                <div class="col-md-6 col-md-offset-3">
 
 
+                    <div class="form-group">
+                        <label for="InputTitle">Adventure title</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="InputTitle" id="InputTitle">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Adventure Country</label>
+                        <div class="input-group">
+                            <input type="country" class="form-control" id="InputCountry" name="InputCountry" placeholder="Enter Country" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputAdventure">Tell your Story</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="InputAdventure" name="InputAdventure" cols="50" rows="10"></textarea>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="input-group">-->
+                    <input type="submit" name="create" id="create" value="Create" class="btn btn-info pull-right">
+                       <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+
+                    </div>
+                  -->
+                </div>
+
+            </form>
 
         </div>
-
-
-        <div class="col-md-9">
-
-            <h2 class="text-center">Adventure posted page option</h2>
-            <br>
-            <h5 class="text-center">Adventure posted page options area here..</h5>
-
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-            <p  class="text-center">............</p>
-
-        </div>
-
-
-
-
     </div>
 
-
-
-
+    <hr>
 
     <!-- Footer -->
     <footer>
@@ -144,6 +134,13 @@ include ("function/function.php");
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
 
 </body>
 

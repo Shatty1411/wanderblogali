@@ -249,7 +249,7 @@ EOT;
 
 
 function getUserInfo (){
-    global $DbConnection;;
+    global $DbConnection;
     $value = '';
     $author_id = $_GET['id'];
     $author = "SELECT * FROM users WHERE userID = '$author_id'";

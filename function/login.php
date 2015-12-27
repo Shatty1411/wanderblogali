@@ -20,7 +20,8 @@ if (isset($_POST['olvidado'])) {
         $username = $row['email'];
         $name = $row['name'];
         $_SESSION['username'] = $username;
-        echo "<script>window.open('../profile.php', '_self')</script>";
+        $id = $row['userID'];
+        echo "<script>window.open('../profile.php?id=$id', '_self')</script>";
         exit();
     }
     else {

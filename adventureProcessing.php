@@ -1,13 +1,13 @@
  <?php
             include ("function/login.php");
             include ("function/db.php");
-            global $conn;
+           global $DbConnection;;
             if (isset($_POST['create'])) {
                 $title = $_POST['InputTitle'];
                 $ad_country = $_POST['InputCountry'];
                 $story = $_POST['InputAdventure'];
                 $user_email = $_SESSION['email'];
-                $id = mysqli_query($conn, "SELECT * from users WHERE email='$user_email'");
+                $id = mysqli_query($DbConnection, "SELECT * from users WHERE email='$user_email'");
                 while ($run_id = mysqli_fetch_assoc($id)) {
                     $user_id = $run_id['userID'];
                     $authorname = $run_id['name'];
@@ -15,7 +15,7 @@
                 }
                 $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, image_folder, title)
         VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' , '$desired_dir', $title)";
-                $run_data = mysqli_query($conn, $data);
+                $run_data = mysqli_query($DbConnection, $data);
 
                 if ($run_data) {
                     echo "<script>alert('Your adventure was successfully created')</script>";

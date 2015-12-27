@@ -26,13 +26,13 @@ if (isset($_POST['submit'])){
         }
 
         $name = $_POST['InputName'];
-        $lastname = $_POST['InputLastName'];
+
         $country =  $_POST['InputCountry'];;
         $password = md5( $_POST['InputPassword'] );
-        $date = $_POST['InputDate'];
+
         $role = $_POST['usertype'];
-      echo  $run_sql = "INSERT INTO users (name ,surname, role, birthday, email, passw, nationality)
- VALUES ('$name', '$lastname', '$role', '$date', '$email', '$role', '$password', '$country' ) ";
+      echo  $run_sql = "INSERT INTO users (name , role, email, passw, nationality)
+ VALUES ('$name', '$role', '$email', '$role', '$password', '$country' ) ";
         exit;
 
         if(mysqli_query($DbConnection,$run_sql)){

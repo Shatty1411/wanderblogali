@@ -76,9 +76,10 @@ include ("function/function.php");
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Authors Page</h1>
+            <h1 class="page-header">Users Page</h1>
             <h4>
-                <?php echo getUserInfo(); ?>
+                <?php echo "<h3>Welcome " . $_SESSION['name'] . "</h3>";
+                echo "<p>getUserInfo()</p>"; ?>
             </h4>
 
             <br>

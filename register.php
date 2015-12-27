@@ -19,7 +19,7 @@ if (isset($_POST['submit'])){
 
     $role = $_POST['usertype'];
     $run_sql = "INSERT INTO users (name , role, email, passw, nationality)
- VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
+  VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
     if(mysqli_query($DbConnection,$run_sql)){
         header( "refresh:2;url=index.php" );
         echo "<script>alert('Your registration was successful')</script>";  ;

@@ -64,7 +64,7 @@ include ("function/function.php");
 <?php if (isset($_SESSION['name'])){
     echo '
         <div id="logout">
-           <a href="functions/logout.php" ><button type="submit">Logout</button></a>
+           <a href="function/logout.php" ><button type="submit">Logout</button></a>
         </div>'; }?>
 <!-- Page Content -->
 <div class="container">

@@ -1,8 +1,10 @@
 <?php
 session_start();
-
 include("db.php");
 global $DbConnection;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if (isset($_POST['olvidado'])) {
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $errEmail = 'Please enter a valid email address';

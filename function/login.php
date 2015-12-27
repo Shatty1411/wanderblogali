@@ -17,12 +17,10 @@ if (isset($_POST['olvidado'])) {
 
     if (mysqli_num_rows($checklogin) == 1) {
         $row = mysqli_fetch_assoc($checklogin);
-        $username = $row['username'];
+        $username = $row['email'];
         $name = $row['name'];
         $_SESSION['username'] = $username;
-        $_SESSION['name'] = $name;
-        $_SESSION['LoggedIn'] = 1;
-        echo "<script>window.open('../adventures.php', '_self')</script>";
+        echo "<script>window.open('../profile.php', '_self')</script>";
         exit();
     }
     else {

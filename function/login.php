@@ -15,7 +15,7 @@ if (isset($_POST['olvidado'])) {
 
     if (mysqli_num_rows($checklogin) == 1) {
         $row = mysqli_fetch_assoc($checklogin);
-        $username = $row['email'];
+        $username = $row['username'];
         $name = $row['firstname'];
         $_SESSION['username'] = $username;
         $_SESSION['name'] = $name;

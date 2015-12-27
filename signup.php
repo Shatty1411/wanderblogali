@@ -126,9 +126,9 @@
                         <h5>Choose prefered role:</h5>
 
                         <label class="radio-inline">
-                            <input type="radio" name = "usertype" value="Reader">Reader</label>
+                            <input type="radio" name="usertype" value="Reader">Reader</label>
                         <label class="radio-inline">
-                            <input type="radio" name = "usertype" value="Author">Author</label>
+                            <input type="radio" name="usertype" value="Author">Author</label>
 
                     </div>
                     <!--<div class="input-group">-->

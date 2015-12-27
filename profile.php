@@ -8,7 +8,7 @@
  */
 include ("function/login.php");
 include ("function/function.php");
-include ("function/logout.php")
+include ("function/logout.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

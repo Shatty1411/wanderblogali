@@ -78,7 +78,7 @@
     <br>
     <div class="container">
         <div class="row">
-            <form role="form" action="register_old.php" method="GET">
+            <form role="form" action="register.php" method="GET">
                 <div class="col-md-6 col-md-offset-3">
 
                     <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>

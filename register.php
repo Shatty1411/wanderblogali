@@ -12,34 +12,27 @@ global $DbConnection;
 $error = 0;
 if (isset($_POST['submit'])){
     $email = $_POST['InputEmail'];
-    echo $email;
+    $name = $_POST['InputName'];
+
+    $country =  $_POST['InputCountry'];;
+    $password = md5( $_POST['InputPassword'] );
+
+    $role = $_POST['usertype'];
+    $run_sql = "INSERT INTO users (name , role, email, passw, nationality)
+ VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
+    if(mysqli_query($DbConnection,$run_sql)){
+        header( "refresh:2;url=index.php" );
+        echo "<script>alert('Your registration was successful')</script>";  ;
+    } else {
+        echo "error";
+    }
+
 }
 
-	if(isset($_POST['submit'])){
-        $email = $_POST['InputEmail'];
-        //echo $email;
-        $sql = "SELECT * FROM users where email='$email'";
-        $query = mysqli_query($con,$sql);
-        if( mysqli_num_rows($query) > 0){
-            header('Location:signup.php?error=1');
-            exit;
-        }
 
-        $name = $_POST['InputName'];
 
-        $country =  $_POST['InputCountry'];;
-        $password = md5( $_POST['InputPassword'] );
 
-        $role = $_POST['usertype'];
-      echo  $run_sql = "INSERT INTO users (name , role, email, passw, nationality)
- VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
-        exit;
 
-        if(mysqli_query($DbConnection,$run_sql)){
-            header( "refresh:2;url=index.php" );
-            echo "<script>alert('Your registration was successful')</script>";  ;
-        }
-    }else{
-        header('Location:signup.php?error=2');
 
-    }
+
+

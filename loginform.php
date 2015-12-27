@@ -104,7 +104,7 @@
             <i class="glyphicon glyphicon-lock">
             </i>
           </span>
-                            <input class="form-control" placeholder="Password" name="password" type="password" value="" required="">
+                            <input class="form-control" placeholder="Password" name="password" type="password" value="password" required="">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" id="olvidado" name="olvidado">

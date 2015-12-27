@@ -6,7 +6,9 @@
  * Time: 12:23 AM
  *
  */
+include ("function/login.php");
 include ("function/function.php");
+include ("function/logout.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">

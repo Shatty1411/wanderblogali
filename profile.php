@@ -79,7 +79,7 @@ include ("function/function.php");
             <h1 class="page-header">Users Page</h1>
             <h4>
                 <?php echo "<h3>Welcome " . $_SESSION['name'] . "</h3>";
-                echo "<p>getUserInfo()</p>"; ?>
+                echo "<p>" . getUserInfo() . "</p>"; ?>
             </h4>
 
             <br>

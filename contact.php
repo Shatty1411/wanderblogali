@@ -1,10 +1,11 @@
-<?php?>
+<?php
 /**
  * Created by PhpStorm.
  * User: Albc
  * Date: 12/23/2015
  * Time: 12:26 AM
  */
+?>
 <!DOCTYPE html>
 <html lang="en">
 

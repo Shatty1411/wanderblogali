@@ -2,10 +2,7 @@
 
 $servername = "eu-cdbr-azure-west-d.cloudapp.net";
 $username = "b2b3b585e0826f";
-//$username = "b2b3b585e0826f";
-//$username = "b2b3b585e0826f";
 //$password = "a757beba";
-//$dbname = "wonderblog";
 $password = "a757beba";
 $dbname = "wonderblog";
 

@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
 
         $name = $_GET['InputName'];
         $lastname = $_GET['InputLastName'];
-        $country =  $_GET['InputCountrys'];;
+        $country =  $_GET['InputCountry'];;
         $password = md5( $_GET['InputPassword'] );
         $date = $_GET['InputDate'];
         $role = $_GET['usertype'];

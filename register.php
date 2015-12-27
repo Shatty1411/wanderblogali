@@ -31,8 +31,8 @@ if (isset($_POST['submit'])){
         $password = md5( $_POST['InputPassword'] );
         $date = $_POST['InputDate'];
         $role = $_POST['usertype'];
-      echo  $run_sql = "INSERT INTO users (email ,firstname, surname, passw, nationality, role, birthday)
- VALUES ('$email', '$name', '$lastname', '$password', '$country', '$role', '$date') ";
+      echo  $run_sql = "INSERT INTO users (name ,surname, role, birthday, email, passw, nationality)
+ VALUES ('$name', '$lastname', '$role', '$date', '$email', '$role', '$password', '$country' ) ";
         exit;
 
         if(mysqli_query($DbConnection,$run_sql)){

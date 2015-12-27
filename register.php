@@ -32,7 +32,7 @@ if (isset($_POST['submit'])){
 
         $role = $_POST['usertype'];
       echo  $run_sql = "INSERT INTO users (name , role, email, passw, nationality)
- VALUES ('$name', '$role', '$email', '$role', '$password', '$country' ) ";
+ VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
         exit;
 
         if(mysqli_query($DbConnection,$run_sql)){

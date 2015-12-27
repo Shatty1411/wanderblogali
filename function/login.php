@@ -8,6 +8,7 @@ if (isset($_POST['olvidado'])) {
     }
 
     $email = mysqli_real_escape_string($DbConnection, $_POST['email']);
+    $password = mysqli_real_escape_string($DbConnection, $_POST['password']);
     $password = md5($_POST['password']);
 
     $checklogin = mysqli_query($DbConnection, "SELECT * FROM users WHERE email = '$email' AND passw = '$password'");

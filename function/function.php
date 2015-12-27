@@ -257,7 +257,7 @@ function getUserInfo (){
     while($row = mysqli_fetch_array($d_author)){
         $author_name= ucfirst($row['name']);
         $author_email= $row['email'];
-        $author_country=$row['country'];
+        $author_country=$row['nationality'];
         $role = $row['role'];
         $author_story = "SELECT * FROM adventures WHERE userID='$author_id'";
         $run_author_story = mysqli_query($DbConnection, $author_story);

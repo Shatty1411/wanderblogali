@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     $email = $_POST['InputEmail'];
     $name = $_POST['InputName'];
 
-    $country =  $_POST['InputCountry'];;
+    $country =  $_POST['InputCountry'];
     $password = md5( $_POST['InputPassword'] );
 
     $role = $_POST['usertype'];
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])){
   VALUES ('$name', '$role', '$email', '$password', '$country' ) ";
     if(mysqli_query($DbConnection,$run_sql)){
         header( "refresh:2;url=index.php" );
-        echo "<script>alert('Your registration was successful')</script>";  ;
+        echo "<script>alert('Your registration was successful');</script>";
     } else {
         echo "error";
     }

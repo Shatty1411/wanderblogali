@@ -50,15 +50,27 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav navbar-right">
+             <?php if(isset($_SESSION['name'])){
+                 echo '<li ><a href="profile.php">Home</a></li>
+    <li ><a href="function/logout.php">Logout</a></li>
+    <li class="active"><a href="adventure.php">Adventure</a></li>
+    <li><a href="contact.php">Messaging</a></li>
 
+    ';
+             }
+             else{
+                 echo '
     <li ><a href="index.php">Index</a></li>
-    <li class="active"><a href="about.php">About</a></li>
+    <li ><a href="about.php">About</a></li>
     <li ><a href="signup.php">Signup</a></li>
-    <li><a href="adventure.php">Adventure</a></li>
+    <li class="active"><a href="adventure.php">Adventure</a></li>
     <li ><a href="loginform.php">Login</a></li>
     <li><a href="contact.php">Contact</a></li>
+    ';
+             }?>
 
-  </ul>
+
+         </ul>
             </div>
 
         </div>

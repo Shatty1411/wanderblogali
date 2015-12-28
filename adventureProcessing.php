@@ -11,10 +11,9 @@
                 while ($run_id = mysqli_fetch_assoc($id)) {
                     $user_id = $run_id['userID'];
                     $authorname = $run_id['name'];
-                    echo $authorname;
                 }
-                $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, image_folder, title)
-        VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' , '$desired_dir', $title)";
+                $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
+        VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' , $title)";
                 $run_data = mysqli_query($DbConnection, $data);
 
                 if ($run_data) {

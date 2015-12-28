@@ -17,6 +17,7 @@
         VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' ,'$title')";
 
                     $run_data = mysqli_query($DbConnection, $data);
+                    echo "<pre>Debug: $run_data</pre>\m";
                     if (false===$run_data){
                      printf("error: %s\n", mysqli_error($DbConnection));
                     }

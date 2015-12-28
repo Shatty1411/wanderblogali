@@ -15,16 +15,19 @@
 
                     $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
         VALUES ('$story', '$authorname', '$ad_country', NOW, '$user_id' ,'$title')";
-                    if ($data){
-                        echo "step one";
-                    }
-                    $run_data = mysqli_query($DbConnection, $data);
 
-                    if ($run_data) {
+                    $run_data = mysqli_query($DbConnection, $data);
+                    if (false===$run_data){
+                     printf("error: %s\n", mysqli_error($DbConnection));
+                    }
+                    else{
+                        echo "done";
+                    }
+                    /*if ($run_data) {
                         echo "<script>alert('Your adventure was successfully created')</script>";
                         echo "<script>window.open('../profile.php', '_self')</script>";
 
-                    }
+                    }*/
 
                 }
             }

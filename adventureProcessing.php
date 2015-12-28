@@ -15,6 +15,9 @@
 
                     $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
         VALUES ('$story', '$authorname', '$ad_country', NOW, '$user_id' ,'$title')";
+                    if ($data){
+                        echo "step one";
+                    }
                     $run_data = mysqli_query($DbConnection, $data);
 
                     if ($run_data) {

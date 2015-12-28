@@ -10,10 +10,11 @@
                 $id = mysqli_query($DbConnection, "SELECT * from users WHERE email='$user_email'");
                 while ($run_id = mysqli_fetch_assoc($id)) {
                     $user_id = $run_id['userID'];
+                    echo $user_id;
                     $authorname = $run_id['name'];
 
                     $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
-        VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' ,' $title')";
+        VALUES ('$story', '$authorname', '$ad_country', NOW, '$user_id' ,'$title')";
                     $run_data = mysqli_query($DbConnection, $data);
 
                     if ($run_data) {

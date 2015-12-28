@@ -11,14 +11,16 @@
                 while ($run_id = mysqli_fetch_assoc($id)) {
                     $user_id = $run_id['userID'];
                     $authorname = $run_id['name'];
-                }
-                $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
-        VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' , $title)";
-                $run_data = mysqli_query($DbConnection, $data);
 
-                if ($run_data) {
-                    echo "<script>alert('Your adventure was successfully created')</script>";
-                    echo "<script>window.open('../profile.php', '_self')</script>";
+                    $data = "INSERT INTO adventures( adventure, adv_writer, country, date, userID, title)
+        VALUES ('$story', '$authorname', '$ad_country', 'NOW', '$user_id' , $title)";
+                    $run_data = mysqli_query($DbConnection, $data);
+
+                    if ($run_data) {
+                        echo "<script>alert('Your adventure was successfully created')</script>";
+                        echo "<script>window.open('../profile.php', '_self')</script>";
+
+                    }
 
                 }
             }

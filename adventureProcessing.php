@@ -6,7 +6,7 @@
                 $title = $_POST['InputTitle'];
                 $ad_country = $_POST['InputCountry'];
                 $story = $_POST['InputAdventure'];
-                $user_email = $_SESSION['email'];
+                $user_email = $_SESSION['username'];
                 $id = mysqli_query($DbConnection, "SELECT * from users WHERE email='$user_email'");
                 while ($run_id = mysqli_fetch_assoc($id)) {
                     $user_id = $run_id['userID'];

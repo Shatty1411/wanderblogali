@@ -69,16 +69,8 @@ include ("function/function.php");
     <div class="row">
 
         <div class="col-md-12">
-            <h2>Location </h2>
-            <br> <br>
-            <img class="img-responsive img-hover" src="pictures/egypt.jpg" alt="">
-
-            <br> <br>
-            <hr>
-
             <?php full_adventure(); ?>
 
-            <?php adventure_images(); ?>
             <div class="well">
 
                 <h4>Leave a Comment:</h4>
